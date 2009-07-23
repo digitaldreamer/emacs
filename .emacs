@@ -17,6 +17,11 @@
 ;(setq auto-fill-mode 1) ;wrap text
 (prefer-coding-system 'utf-8) ;use unicode
 
+;; comment blocks
+(global-set-key [(ctrl shift m)] 'comment-region)
+(global-set-key [(ctrl shift n)] 'uncomment-region)
+
+
 ;; cycle buffers
 (autoload 'cycle-buffer "~/emacs/cycle-buffer" "Cycle forward." t)
 (autoload 'cycle-buffer-backward "~/emacs/cycle-buffer" "Cycle backward." t)
@@ -51,10 +56,10 @@
 (color-theme-dark-blue2)
 
 ;; change initial size
-(add-to-list 'default-frame-alist '(height . 60))
-(add-to-list 'default-frame-alist '(width . 225))
-(add-to-list 'default-frame-alist '(top . 100))
-(add-to-list 'default-frame-alist '(left . 200))
+;(add-to-list 'default-frame-alist '(height . 60))
+;(add-to-list 'default-frame-alist '(width . 225))
+;(add-to-list 'default-frame-alist '(top . 100))
+;(add-to-list 'default-frame-alist '(left . 200))
 
 ;; ido (for completion in opening and switching buffers)
 (require 'ido)
