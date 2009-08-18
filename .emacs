@@ -53,7 +53,8 @@
 
 (require 'color-theme)
 (color-theme-initialize)
-(color-theme-dark-blue2)
+;(color-theme-dark-blue2)
+(color-theme-charcoal-black)
 
 ;; change initial size
 ;(add-to-list 'default-frame-alist '(height . 60))
