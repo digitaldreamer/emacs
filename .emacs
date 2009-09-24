@@ -90,3 +90,10 @@
 ;; javascript mode
 (autoload 'javascript-mode "javascript" nil t)
 (add-to-list 'auto-mode-alist '("\\.js\\'" . javascript-mode))
+
+;; close all buffers
+(defun kill-all-buffers ()
+  (interactive)
+  (mapc 'kill-buffer (buffer-list)))
+
+;(global-set-key "\C-cx" 'kill-all-buffers)
