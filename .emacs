@@ -16,6 +16,9 @@
 (mouse-wheel-mode t) ;mouse scroll
 ;(setq auto-fill-mode 1) ;wrap text
 (prefer-coding-system 'utf-8) ;use unicode
+;(global-hl-line-mode 1) ; highlight current line
+(transient-mark-mode t) ; highlight region
+(setq mouse-drag-copy-region nil) ; highlighting regions with the mouse does not copy text
 
 ;; comment blocks
 (global-set-key [(ctrl shift m)] 'comment-region)
@@ -34,7 +37,6 @@
 (global-set-key [(ctrl shift down)] 'cycle-buffer-backward-permissive)
 ;;(global-set-key [(ctrl shift right)] 'cycle-buffer-toggle-interesting)
 ;;(global-set-key [(ctrl shift left)] 'cycle-buffer-toggle-interesting)
-
 
 
 
@@ -71,8 +73,8 @@
 ;(global-fuzzy-format-mode t)
 
 ;; tab
-(global-set-key (kbd "TAB") 'self-insert-command)
-;(global-set-key (kbd "TAB") 'tab-to-tab-stop)
+;(global-set-key (kbd "TAB") 'self-insert-command) ; force insert one tab
+;(global-set-key (kbd "TAB") 'tab-to-tab-stop) ; tabs are relative to the line above
 ;(global-set-key "\C-m" 'newline-and-indent)
 (setq standard-indent 1)
 (setq-default indent-tabs-mode nil) ;Use spaces for tabs only!
