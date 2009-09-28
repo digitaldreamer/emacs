@@ -73,7 +73,7 @@
 ;(global-fuzzy-format-mode t)
 
 ;; tab
-;(global-set-key (kbd "TAB") 'self-insert-command) ; force insert one tab
+(global-set-key (kbd "TAB") 'self-insert-command) ; force insert one tab
 ;(global-set-key (kbd "TAB") 'tab-to-tab-stop) ; tabs are relative to the line above
 ;(global-set-key "\C-m" 'newline-and-indent)
 (setq standard-indent 1)
