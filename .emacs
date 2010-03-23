@@ -90,6 +90,7 @@
 (add-hook 'python-mode-hook 'my-pystuff)
 
 ; toggle home between first non-whitespace and beginning of line
+; M-m is bound to back-to-indentation
 (defun smart-beginning-of-line ()
   (interactive)
   (let ((oldpos (point)))
@@ -105,6 +106,7 @@
 (add-to-list 'auto-mode-alist '("\\.js\\'" . javascript-mode))
 
 ;; close all buffers
+; sets callable function M-x kill-all-buffers
 (defun kill-all-buffers ()
   (interactive)
   (mapc 'kill-buffer (buffer-list)))
