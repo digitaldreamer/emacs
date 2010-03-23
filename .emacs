@@ -73,7 +73,7 @@
 ;(global-fuzzy-format-mode t)
 
 ;; tab
-(global-set-key (kbd "TAB") 'self-insert-command) ; force insert one tab
+;(global-set-key (kbd "TAB") 'self-insert-command) ; force insert one tab
 ;(global-set-key (kbd "TAB") 'tab-to-tab-stop) ; tabs are relative to the line above
 ;(global-set-key "\C-m" 'newline-and-indent)
 (setq standard-indent 1)
@@ -84,7 +84,7 @@
 (defun my-pystuff ()
   (setq tab-width 4
         py-indent-offset 4
-        indent-tabs-mode t
+        indent-tabs-mode nil
         py-smart-indentation nil))
 
 (add-hook 'python-mode-hook 'my-pystuff)
