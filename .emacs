@@ -89,6 +89,17 @@
 
 (add-hook 'python-mode-hook 'my-pystuff)
 
+; toggle home between first non-whitespace and beginning of line
+(defun smart-beginning-of-line ()
+  (interactive)
+  (let ((oldpos (point)))
+    (back-to-indentation)
+    (and (= oldpos (point))
+         (beginning-of-line))))
+
+(global-set-key [home] 'smart-beginning-of-line)
+
+
 ;; javascript mode
 (autoload 'javascript-mode "javascript" nil t)
 (add-to-list 'auto-mode-alist '("\\.js\\'" . javascript-mode))
