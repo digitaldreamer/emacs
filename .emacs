@@ -19,6 +19,35 @@
 ;(global-hl-line-mode 1) ; highlight current line
 (transient-mark-mode t) ; highlight region
 (setq mouse-drag-copy-region nil) ; highlighting regions with the mouse does not copy text
+(show-paren-mode 1) ; highlights matching parens
+
+
+;; electric pairs, enter matching pairs
+(defun electric-pair ()
+  "Insert character pair without surrounding spaces"
+  (interactive)
+  (let (parens-require-spaces)
+    (insert-pair)))
+
+(global-set-key "\"" 'electric-pair)
+(global-set-key "\'" 'electric-pair)
+(global-set-key "[" 'electric-pair)
+(global-set-key "{" 'electric-pair)
+(global-set-key "(" 'electric-pair)
+
+;; (defun electric-pair ()
+;;   "If at end of line, insert character pair without surrounding spaces. Otherwise, just insert the typed character."
+;;   (interactive)
+;;   (if (eolp) (let (parens-require-spaces) (insert-pair)) (self-insert-command 1)))
+
+;(add-hook 'python-mode-hook
+;          (lambda ()
+;            (define-key python-mode-map "\"" 'electric-pair)
+;            (define-key python-mode-map "\'" 'electric-pair)
+;            (define-key python-mode-map "(" 'electric-pair)
+;            (define-key python-mode-map "[" 'electric-pair)
+;            (define-key python-mode-map "{" 'electric-pair)))
+
 
 ;; comment blocks
 (global-set-key [(ctrl shift m)] 'comment-region)
