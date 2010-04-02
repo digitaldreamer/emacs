@@ -23,30 +23,30 @@
 
 
 ;; electric pairs, enter matching pairs
-(defun electric-pair ()
-  "Insert character pair without surrounding spaces"
-  (interactive)
-  (let (parens-require-spaces)
-    (insert-pair)))
+;; (defun electric-pair ()
+;;   "Insert character pair without surrounding spaces"
+;;   (interactive)
+;;   (let (parens-require-spaces)
+;;     (insert-pair)))
 
-(global-set-key "\"" 'electric-pair)
-(global-set-key "\'" 'electric-pair)
-(global-set-key "[" 'electric-pair)
-(global-set-key "{" 'electric-pair)
-(global-set-key "(" 'electric-pair)
+;; (global-set-key "\"" 'electric-pair)
+;; (global-set-key "\'" 'electric-pair)
+;; (global-set-key "[" 'electric-pair)
+;; (global-set-key "{" 'electric-pair)
+;; (global-set-key "(" 'electric-pair)
 
 ;; (defun electric-pair ()
 ;;   "If at end of line, insert character pair without surrounding spaces. Otherwise, just insert the typed character."
 ;;   (interactive)
 ;;   (if (eolp) (let (parens-require-spaces) (insert-pair)) (self-insert-command 1)))
 
-;(add-hook 'python-mode-hook
-;          (lambda ()
-;            (define-key python-mode-map "\"" 'electric-pair)
-;            (define-key python-mode-map "\'" 'electric-pair)
-;            (define-key python-mode-map "(" 'electric-pair)
-;            (define-key python-mode-map "[" 'electric-pair)
-;            (define-key python-mode-map "{" 'electric-pair)))
+;; (add-hook 'python-mode-hook
+;;          (lambda ()
+;;            (define-key python-mode-map "\"" 'electric-pair)
+;;            (define-key python-mode-map "\'" 'electric-pair)
+;;            (define-key python-mode-map "(" 'electric-pair)
+;;            (define-key python-mode-map "[" 'electric-pair)
+;;            (define-key python-mode-map "{" 'electric-pair)))
 
 
 ;; comment blocks
