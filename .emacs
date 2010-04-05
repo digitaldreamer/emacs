@@ -141,3 +141,11 @@
   (mapc 'kill-buffer (buffer-list)))
 
 ;(global-set-key "\C-cx" 'kill-all-buffers)
+
+
+;; split windows
+(defun split-windows ()
+  (interactive)
+  (split-window-horizontally)
+  (other-window 1)
+  (split-window-vertically))
