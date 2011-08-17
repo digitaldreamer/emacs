@@ -20,7 +20,8 @@
 (transient-mark-mode t) ; highlight region
 (setq mouse-drag-copy-region nil) ; highlighting regions with the mouse does not copy text
 (show-paren-mode 1) ; highlights matching parens
-
+(setq x-select-enable-clipboard t) ; copy to clipboard
+(setq interprogram-paste-function 'x-cut-buffer-or-selection-value) ; paste from clipboard
 
 ;; electric pairs, enter matching pairs
 ;; (defun electric-pair ()
